@@ -4,7 +4,7 @@ local MainUI = UILibrary.Load("Dimag X")
 local MainPage = MainUI.AddPage("Main")
 local CombatPage = MainUI.AddPage("Combat")
 local teleportPage = MainUI.AddPage("Teleports")
-local AimlockPage = MainUI.AddPage("Aimlock")
+local lockPage = MainUI.AddPage("lock")
 local FunstuffPage = MainUI.AddPage("Fun Stuff")
 local AutoBuyPage = MainUI.AddPage("Auto Buy")
 local TargetPage = MainUI.AddPage("Target")
@@ -599,7 +599,7 @@ end)
 
 ---------------
 
-local SecondButton = AimlockPage.AddButton("Dimag Aimlock (Q)", function()
+local SecondButton = lockPage.AddButton("Dimag lock (Q)", function()
     _G.KEY = "q"
     _G.PART = "LowerTorso"
     _G.PRED = 0.037
@@ -837,7 +837,7 @@ local SecondButton = AimlockPage.AddButton("Dimag Aimlock (Q)", function()
         local PingNumber = pingValue[1]
         
         accomidationfactor = PingNumber / 1000 + _G.PRED
-         if getClosestPlayerToCursor().Character.Humanoid.Jump == true and AimlockTarget.Character.Humanoid.FloorMaterial == Enum.Material.Air then
+         if getClosestPlayerToCursor().Character.Humanoid.Jump == true and lockTarget.Character.Humanoid.FloorMaterial == Enum.Material.Air then
             _G.PART = "RightFood"
             accomidationfactor = _G.AIR
         else
@@ -1019,7 +1019,7 @@ local niggers = FunstuffPage.AddButton("Chat Logs", function()
     LP.PlayerGui.Chat.Frame.ChatBarParentFrame.Position = LP.PlayerGui.Chat.Frame.ChatChannelParentFrame.Position + UDim2.new(UDim.new(),LP.PlayerGui.Chat.Frame.ChatChannelParentFrame.Size.Y)
 end)
 
-local anti = FunstuffPage.AddButton("Anti-Aim", function()
+local anti = FunstuffPage.AddButton("Anti-", function()
 	local UniversalAnimation = Instance.new("Animation")
 
 	function stopTracks()
